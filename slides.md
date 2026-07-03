@@ -170,7 +170,7 @@ flowchart LR
     TokenizeInner[Tokenize]
   end
 
-  subgraph Transformers[A series of <strong>transformers</strong> refine the model's understanding of the query]
+  subgraph Transformers[A series of <strong>transformers</strong> refine the model's understanding of the prompt]
     Transformer1 --> Transformer2 --> Ellipsis --> Transformer3
   end
 
@@ -295,7 +295,7 @@ Chat-based coding offers **full control** over how code is implemented and run.
 
 1. **You see everything:** Every piece of code goes through your eyes and clipboard
 2. **Nothing runs automatically:** You decide when and how to execute code
-3. **Clear boundaries:** The LLM cannot access your files, run commands, or modify anything
+3. **Clear boundaries:** The LLM cannot access your files, run commands, or modify anything directly
 4. **Explicit data sharing:** You control exactly what context the LLM receives
 5. **Line-by-line explanations:** Generally good for simple code. Useful for understanding and debugging code.
 
@@ -499,28 +499,10 @@ When using an LLM to code:
 <label><input type="checkbox">Understand the code - if you can’t explain it, don’t use it</label>
 
 ---
-
-
-# Managing context effectively
-
-| Element                  | Impact                         |
-|--------------------------|--------------------------------|
-| Your prompts             | Directly shape the response    |
-| LLM's previous responses | Become part of the “memory”    |
-| Code you paste           | Provides examples and patterns |
-| Error messages shared    | Help with debugging            |
-
-If a chat is no longer useful, start a new one
-
-<!-- Context can break down in long chats. For example, safety guardrails can become ineffective. -->
-
+layout: section
 ---
 
-# Effective prompting strategies
-
----
-
-# Using LLM to understand existing code
+# Example: Geospatial data
 
 ---
 layout: default
@@ -529,24 +511,8 @@ layout: default
 # Validating geospatial data
 
 - Accurate locality information is crucial to research in many domains
-- Identifying incorrect coordinates is useful for both researchers working with biodiversity data and collection managers assessing data about their collections
+- Identifying incorrect coordinates is useful for both researchers and collection managers assessing data about their collections
 - Manually checking coordinates is labor-intensive, so here we will try to **develop a script that allows us to validate a large number of coordinates at once.**
-
----
-
-# Goal
-
-Write a Python script to identify and visualize problematic coordinates using the following datasets:
-
-- NMNH specimens from Maine as a Darwin Core CSV file (https://gbif.org)
-- County polygons for Maine from GADM (https://gadm.org/license.html)
-
-<br>
-
-<div class="highlight-box exercise">
-<h2>Exercise</h2>
-Let's take a few minutes to explore the problem. Ask the LLM for strategies for approaching this problem based on what we've covered so far. What is good libraries exist? What features should the script have? Add what you learn to the collaborative notes document.
-</div>
 
 ---
 
@@ -557,13 +523,29 @@ Let's take a few minutes to explore the problem. Ask the LLM for strategies for 
 - **Geometries** are mathematical representations of shapes (Point, LineString, Polygon, etc.)
 - **Spatial operations** calculate how geometries relate to each other (intersects, within, touches, disjoint, etc.)
 - **Coordinate reference systems (CRS)** are used to measure locations on the Earth's surface. The most common CRS is `epsg:4326`, which is the geographic CRS used by GPS.
-  - A **geographic CRS** records coordinates as degrees. Global, used by GIS, bad for calculating distance and area.
+  - A **geographic CRS** records coordinates as degrees. Global, used by GIS, unreliable for calculating distance and area.
   - A **projected CRS** projects coordinates to a flat map. Units are meters, feet, etc. Local, good for calculating distance and area with the right CRS.
 - **Projection** is the process of translating coordinates between different CRS
 
 </v-clicks>
 
-<!-- When using spatial operations to compare, they must use the same CRS. -->
+<!-- When using spatial operations to compare, geometries must use the same CRS -->
+
+---
+
+# Goal
+
+Write a Python script to identify and visualize problematic coordinates using the following datasets:
+
+- NMNH specimens from Maine as a Darwin Core CSV file (https://doi.org/10.15468/dl.rwtjmj)
+- County polygons for Maine from GADM (https://gadm.org/)
+
+<br>
+
+<div class="highlight-box exercise">
+<h2>Exercise</h2>
+Let's take a few minutes to explore the problem. Ask the LLM for strategies for approaching this problem based on what we've covered so far. What is good libraries exist? What features should the script have? Add what you learn to the collaborative notes document.
+</div>
 
 ---
 layout: center
