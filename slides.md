@@ -6,11 +6,7 @@ theme: default
 background: https://cover.sli.dev
 # some information about your slides (markdown enabled)
 title: LLM-Assisted Coding Lesson
-info: |
-  ## Slidev Starter Template
-  Presentation slides for developers.
-
-  Learn more at [Sli.dev](https://sli.dev)
+info: LLM-Assisted Coding Lesson adapted from https://github.com/coderefinery/coding-with-ai
 # apply UnoCSS classes to the current slide
 class: text-center
 # https://sli.dev/features/drawing
