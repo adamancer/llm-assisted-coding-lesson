@@ -1,0 +1,3 @@
+# LLM-Assisted Coding Lesson
+
+This repository is for a [Slidev](https://github.com/slidevjs/slidev) slideshow adapted from adapted from CodeRefinery, Glerean, E., Lindi, B., Pöhner, I., Rantaharju, J., Christ, S., & Pfau, T. (2026). Responsible Use of Generative AI in Assisted Coding (Version 2026-04-22) [Data set]. https://github.com/coderefinery/coding-with-ai ([CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/))

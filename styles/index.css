@@ -1,0 +1,12 @@
+html, body, ul, li, p { opacity: 1; color: #ccc !important; }
+label { display: block; line-height: 2; }
+input[type='checkbox'] { margin-right: 0.75rem; }
+strong { color: white; }
+th { background-color: darkslategray; }
+
+.slidev-layout h1 + p { opacity: 0.9; }
+.exercise { background-color: #A67C00; }
+.highlight-box { padding: 1rem; border: 1px solid #000; margin: 1rem; }
+.emphasize { color: skyblue; }
+.prompt { color: skyblue; }
+.response { color: pink; }
