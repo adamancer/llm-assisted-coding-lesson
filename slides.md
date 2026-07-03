@@ -5,7 +5,7 @@ theme: default
 # like them? see https://unsplash.com/collections/94734566/slidev
 background: https://cover.sli.dev
 # some information about your slides (markdown enabled)
-title: AI-Assisted Coding Lesson
+title: LLM-Assisted Coding Lesson
 info: |
   ## Slidev Starter Template
   Presentation slides for developers.
