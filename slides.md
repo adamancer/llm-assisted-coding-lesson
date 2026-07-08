@@ -330,7 +330,7 @@ def calculate_statistics(data):
 2. Describe the error to the chatbot and ask it to fix the bug
 3. Ask what other edge cases might cause problems
 
-<!-- A user-defined function is a block of code that can be re-used. They are defined using the def keyword. Each function must have a name (calculate_statistics) and may optionally define argument (here, data). The return keyword returns the result of the function.-->
+<!-- A user-defined function is a block of code that can be re-used. They are defined using the def keyword. Each function must have a name (calculate_statistics) and may optionally define arguments (here, data). The return keyword returns the result of the function.-->
 
 ---
 layout: center
@@ -406,7 +406,7 @@ class: exercise
 1. **Have a plan:** Understand what you want to accomplish and how you will know if you succeeded.
 2. **Suggest tools:** Tell the LLM what language and libraries you'd like to use
 3. **Make it modular:** Instead of trying to build an entire application at once, build it in chunks that are easier to review and test.
-4. **Provide detailed prompts:** Use your knowledge of the language and packages to formulate specific queries, for example, using function signatures
+4. **Provide detailed prompts:** Use your knowledge of the language and packages to formulate specific prompts, for example, using function signatures
 5. **Ask for documentation:** Ask the LLM to annotate code with docstrings and type hints
 6. **Manage context:** Understand how previous prompts may affect the output of the LLM 
 
@@ -416,7 +416,7 @@ class: exercise
 
 # Managing context effectively
 
-Context is everything 
+Context describes all the information available to the LLM.
 
 | Element                  | Impact                             |
 |--------------------------|------------------------------------|
@@ -426,7 +426,7 @@ Context is everything
 | Error messages shared    | Help with debugging                |
 | Instructions to the LLM  | Customize tone, technologies, etc. |
 
-**When a chat is no longer useful or has been left idle for a long time, start a new one**
+When a chat is no longer useful or has been left idle for a long time, **start a new one**
 
 <!-- 
 
@@ -439,7 +439,9 @@ Context is everything
 
 # Vibe Coding
 
-Describes a more relaxed approach where the code returned by the LLM is implemented without being reviewed.
+Describes a more relaxed approach where the LLM handles all coding and its code is implemented with little or no review.
+
+<v-click>
 
 Avoid when you are creating:
 
@@ -448,19 +450,23 @@ Avoid when you are creating:
 - Anything that will be shared or maintained
 - Security-sensitive applications
 
+</v-click>
+
+<v-click>
 And remember that **you are responsible for the code you run!** Vibe-coded applications may include undetected security issues that can put your computer and account at risk.
+</v-click>
 
 <!-- Tempting but unwise, especially on work hardware. Running unreviewed code is a violation of SI policy. -->
 
 ---
 
-## Risks
+## Risks of using LLMs
 
 <v-clicks>
 
-- **Data handling:** Data may be be used for training models or shared with out users. Sharing private data can have moral and legal consequences.
+- **Data handling:** Data may be be used for training models or shared with other users. Sharing private data can have moral and legal consequences.
 - **Hallucinated packages:** Code may include packages that do not exist. Attackers can place malware at likely repository names.
-- **Prompt injection:** LLMs struggle to distinguish between legitimate and malicious prompts. Attackers can hide malicious prompts in websites or attachments, which can trick an LLM into leaking data or other harmful actions.
+- **Prompt injection:** LLMs struggle to distinguish between legitimate and malicious prompts. Attackers can hide malicious prompts in websites or attachments, which can trick an LLM into leaking data or performing other harmful actions.
 - **Vulnerable code:** Code produced by LLMs is not necessarily secure. Be careful executing such code, especially if users are able to provide input.
   - Injection flaws
   - Broken authentication
@@ -470,7 +476,7 @@ And remember that **you are responsible for the code you run!** Vibe-coded appli
 
 </v-clicks>
 
-<!-- Underline that learners are not expected to understand the particulars of these vulnerabilities. -->
+<!-- IP risks. Paper reviews. Underline that learners are not expected to understand the particulars of these vulnerabilities. -->
 
 ---
 
@@ -529,7 +535,7 @@ layout: default
 
 - **Geometries** are mathematical representations of shapes (Point, LineString, Polygon, etc.)
 - **Spatial operations** calculate how geometries relate to each other (intersects, within, touches, disjoint, etc.)
-- **Coordinate reference systems (CRS)** are used to measure locations on the Earth's surface. The most common CRS is `epsg:4326`, which is the geographic CRS used by GPS.
+- **Coordinate reference systems (CRS)** are used to measure locations on the Earth's surface. The most common one is `epsg:4326`, which is the geographic CRS used by GPS.
   - A **geographic CRS** records coordinates as degrees. Global, used by GIS, unreliable for calculating distance and area.
   - A **projected CRS** projects coordinates to a flat map. Units are meters, feet, etc. Local, good for calculating distance and area with the right CRS.
 - **Projection** is the process of translating coordinates between different CRS
@@ -540,7 +546,7 @@ layout: default
 
 ---
 
-# Goal
+# Goal of the coding exercise
 
 Write a Python script to identify and visualize problematic coordinates using the following datasets:
 
