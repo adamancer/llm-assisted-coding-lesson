@@ -1,6 +1,7 @@
 ---
 # try also 'default' to start simple
 theme: default
+colorSchema: dark
 # random image from a curated Unsplash collection by Anthony
 # like them? see https://unsplash.com/collections/94734566/slidev
 background: https://cover.sli.dev
@@ -35,6 +36,7 @@ This slideshow was adapted from **CodeRefinery, Glerean, E., Lindi, B., Pöhner,
 
 ---
 layout: section
+disabled: true
 ---
 
 # Setup
@@ -42,8 +44,8 @@ layout: section
 VS Code and Jupyter Notebook
 
 
-<!-- -->
-
+---
+disabled: true
 ---
 
 # Getting stated with VS Code
@@ -52,6 +54,8 @@ We will be using VS Code for the coding parts of this lesson. You should have a 
 
 Find and open VS Code now.
 
+---
+disabled: true
 ---
 
 # Open the integrated browser
@@ -66,6 +70,8 @@ VS Code includes an integrated browser that allows you to browse the web without
 You can now browse the internet directly in VS Code. Go to [URL] to see the lesson slideshow.
 
 ---
+disabled: true
+---
 
 # Open the project folder
 
@@ -77,6 +83,8 @@ You should have copies of the files necessary for this lesson in a folder on you
 
 You should now be able to see the files in the lesson folder in the left sidebar.
 
+---
+disabled: true
 ---
 
 # Create a notebook
@@ -90,6 +98,8 @@ Next we'll create a notebook for this lesson:
 A blank notebook should now open.
 
 ---
+disabled: true
+---
 
 # Show line numbers
 
@@ -101,6 +111,8 @@ The VS Code editor is highly customizable. One feature that is disabled by defau
 
 We will now run some code to make sure the notebook is working as expected.
 
+---
+disabled: true
 ---
 
 # Test the environment
@@ -118,6 +130,8 @@ The first time you run a notebook in VS Code, you will be prompted to install th
 
 You will now be prompted to select the environment.
 
+---
+disabled: true
 ---
 
 # Install geopandas
@@ -232,21 +246,6 @@ Vendors will do an initial tuning, for example, to impose guardrails and remove 
 
 ---
 
-# Uses
-
-- Writing and annotate code
-- Locating and summarize information
-- Generating large amounts of text
-- Generating images, audio, and video
-- Answering general questions
-- Performing complex analyses
-
-<!--
-Coding is easily the least fraught of these. Google estimates the accuracy of AI Overviews at around 90% 
--->
-
----
-
 # Limitations
 
 LLMs cannot:
@@ -257,7 +256,7 @@ LLMs cannot:
 2. **Access real-time information:** Knowledge is frozen at training cutoff.
 3. **Infer specific context:** They don’t know your data, infrastructure, or requirements unless you tell them.
 4. **Guarantee correctness:** They optimize for “plausible sounding”, not “correct”.
-5. **Explain what they did:** They can output explanations, but there is no reason to believe those explanations accurately reflect their process.
+5. **Explain what they did:** They can output explanations, but there is no reason to believe those explanations accurately reflect what they did.
 </v-clicks>
 
 <br>
@@ -388,9 +387,13 @@ class: exercise
 
 # Planning and production modes
 
+<v-clicks>
+
 1. **Exploration:** Ask the LLM about ways to approach your problem. Determine  
 2. **Planning:** Set up your files, folders, and environment.
-3. **Production:** Provide detailed instructions. Review code for errors, documentation, and security. 
+3. **Production:** Provide detailed instructions. Review code for errors, documentation, and security.
+
+</v-clicks>
 
 <!-- This is mostly project management. How will you know if the code is working as expected? -->
 
@@ -398,12 +401,16 @@ class: exercise
 
 # Building a script
 
+<v-clicks>
+
 1. **Have a plan:** Understand what you want to accomplish and how you will know if you succeeded.
 2. **Suggest tools:** Tell the LLM what language and libraries you'd like to use
 3. **Make it modular:** Instead of trying to build an entire application at once, build it in chunks that are easier to review and test.
 4. **Provide detailed prompts:** Use your knowledge of the language and packages to formulate specific queries, for example, using function signatures
 5. **Ask for documentation:** Ask the LLM to annotate code with docstrings and type hints
 6. **Manage context:** Understand how previous prompts may affect the output of the LLM 
+
+</v-clicks>
 
 ---
 
@@ -544,7 +551,7 @@ Write a Python script to identify and visualize problematic coordinates using th
 
 <div class="highlight-box exercise">
 <h2>Exercise</h2>
-Let's take a few minutes to explore the problem. Ask the LLM for strategies for approaching this problem based on what we've covered so far. What is good libraries exist? What features should the script have? Add what you learn to the collaborative notes document.
+Let's take a few minutes to explore the problem. Ask the LLM for strategies for approaching this problem based on what we've covered so far. What good libraries exist? What features should the script have? Add what you learn to the collaborative notes document.
 </div>
 
 ---
