@@ -292,11 +292,15 @@ layout: section
 
 Chat-based coding offers **full control** over how code is implemented and run.
 
+<v-clicks>
+
 1. **You see everything:** Every piece of code goes through your eyes and clipboard
 2. **Nothing runs automatically:** You decide when and how to execute code
 3. **Clear boundaries:** The LLM cannot access your files, run commands, or modify anything directly
 4. **Explicit data sharing:** You control exactly what context the LLM receives
 5. **Line-by-line explanations:** Generally good for simple code. Useful for understanding and debugging code.
+
+</v-clicks>
 
 <!-- Closest approach to traditional coding methods. Understanding/debugging useful for researchers:
 
